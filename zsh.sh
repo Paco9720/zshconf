@@ -2,10 +2,6 @@
 
 set -e
 
-echo "=== Actualizando repositorios e instalando paquetes necesarios ==="
-sudo apt update
-sudo apt install -y zsh git curl wget build-essential
-
 echo "=== Instalando Oh My Zsh ==="
 export RUNZSH=no
 export CHSH=no
@@ -46,7 +42,7 @@ setopt HIST_VERIFY
 # Cargar plugins externos
 source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-autocomplete
+source $ZSH_CUSTOM/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 EOF
 
 chmod +x ~/.zprofile
