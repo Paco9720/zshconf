@@ -49,15 +49,6 @@ source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-autocomplete
 EOF
 
-echo "=== Creando ~/.zprofile para iniciar dwm desde TTY1 ==="
-
-cat > ~/.zprofile << 'EOF'
-# Iniciar X automáticamente desde TTY1
-if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
-    exec startx
-fi
-EOF
-
 chmod +x ~/.zprofile
 
 echo "=== Cambiando shell por defecto a zsh ==="
